@@ -19,15 +19,19 @@ public class Professor extends Pessoa {
 	public String getMateria() {
 		return materia;
 	}
+	
 	public void setMateria(String materia) {
 		this.materia = materia;
 	}
+	
 	public double getSalario() {
 		return salario;
 	}
+	
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
+	
 	@Override
 	public void consultarSituacao() {
 		System.out.printf("Nome do professor: %s\n"

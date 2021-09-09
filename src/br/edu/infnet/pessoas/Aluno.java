@@ -37,12 +37,15 @@ public class Aluno extends Pessoa{
 	public double getNota2() {
 		return nota2;
 	}
+	
 	public void setNota2(double nota2) {
 		this.nota2 = nota2;
 	}
+	
 	public double getNota3() {
 		return nota3;
 	}
+	
 	public void setNota3(double nota3) {
 		this.nota3 = nota3;
 	}
@@ -85,8 +88,4 @@ public class Aluno extends Pessoa{
 				+"Aprovação: %s\n",this.nome,this.idade,this.turno,this.media,this.aprovacao);
 		System.out.println();
 	}
-
-	
-	
-
 }

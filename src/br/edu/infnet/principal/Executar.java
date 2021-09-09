@@ -62,41 +62,43 @@ public class Executar {
 		do {
 			telaInicial();
 			opcao = in.next();
+			System.out.println();
 			
 			switch (opcao) {
+			
 			case "1":
 				if(indice<Constantes.posicoesVetor) {
 					pessoas[indice] = cadastrarProfessor();
 					System.out.printf("Código do Professor cadastrado: [%d]\n",indice);
 					indice++;
 				}else {
-					System.out.println("Limite de discentes/docentes cadastrados atingido!!");
+					System.err.println("Limite de discentes/docentes cadastrados atingido!!");
 				}
 				System.out.println();
 				break;
 			
 			case "2":
 				if(indice<Constantes.posicoesVetor) {
-					
 					pessoas[indice] = cadastrarAluno();
 					System.out.printf("Código do Aluno cadastrado: [%d]\n",indice);
 					indice++;
-
 				}else {
-					System.out.println("Limite de discentes/docentes cadastrados atingido!!");
+					System.err.println("Limite de discentes/docentes cadastrados atingido!!");
 				}
 				System.out.println();
 				break;
 				
 			case "3":
-					System.out.print("Digite o codigo: ");
-					int codigo = in.nextInt();
-					if(codigo<indice && codigo>=0) {
-						pessoas[codigo].consultarSituacao();
-					}else {
-						System.out.println("Codigo Inválido!!");
-					}
-					System.out.println();
+				System.out.println("Consulta de Discentes/Docentes ");
+
+				System.out.print("Digite o codigo: ");
+				int codigo = in.nextInt();
+				if(codigo<indice && codigo>=0) {
+					pessoas[codigo].consultarSituacao();
+				}else {
+					System.err.println("Codigo Inválido!!");
+				}
+				System.out.println();
 				break;
 				
 			case "4":
